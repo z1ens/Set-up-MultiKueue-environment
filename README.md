@@ -147,7 +147,7 @@ kubectl apply --server-side -f https://github.com/kubernetes-sigs/kueue/releases
 kubectl apply --server-side -f https://github.com/kubernetes-sigs/jobset/releases/download/v0.5.2/manifests.yaml
 ```
 
-- Enable the MultiKueue Feature
+- Enable the MultiKueue Feature on both worker and manager cluster.
 Edit the kueue-controller-manager deployment to enable the MultiKueue feature: 
 ```bash
 kubectl edit deployment kueue-controller-manager -n kueue-system
