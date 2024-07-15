@@ -119,7 +119,7 @@ subjects:
 chmod +x create-multikueue-kubeconfig.sh
 ./create-multikueue-kubeconfig.sh kind-cluster3.kubeconfig
 ```
-
+Note: If you are using `kind-cluster`, the manager cluster and the management cluster are using interal IP address like `https://cluster3-control-plane:6443` for connection.
 And then you will see the restricted MultiKueue role, service account, role binding and secret being created.
 
 ```bash
