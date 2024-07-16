@@ -194,3 +194,10 @@ kubectl get admissionchecks sample-multikueue -o jsonpath="{range .status.condit
 kubectl get multikueuecluster kind-cluster3 -o jsonpath="{range .status.conditions[?(@.type == \"Active\")]}MC - Active: {@.status} Reason: {@.reason} Message: {@.message}{'\n'}{end}"
 
 ```
+
+If success, the results should look like these:
+```bash
+CQ - Active: True Reason: Ready Message: Can admit new workloads
+AC - Active: True Reason: Active Message: The admission check is active
+MC - Active: True Reason: Active Message: Connected
+```
