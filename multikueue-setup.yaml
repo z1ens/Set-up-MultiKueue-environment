@@ -46,16 +46,28 @@ metadata:
   name: multikueue-test
 spec:
   clusters:
+<<<<<<< HEAD
   - kind-cluster3
+=======
+  - kind-cluster2
+>>>>>>> master
 ---
 apiVersion: kueue.x-k8s.io/v1alpha1
 kind: MultiKueueCluster
 metadata:
+<<<<<<< HEAD
   name: kind-cluster3
 spec:
   kubeConfig:
     locationType: Secret
     location: worker1-secret
+=======
+  name: kind-cluster2
+spec:
+  kubeConfig:
+    locationType: Secret
+    location: worker3-secret
+>>>>>>> master
     # a secret called "worker1-secret" should be created in the namespace the kueue
     # controller manager runs into, holding the kubeConfig needed to connect to the
     # worker cluster in the "kubeconfig" key;

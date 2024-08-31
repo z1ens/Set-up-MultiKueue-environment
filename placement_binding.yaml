@@ -1,0 +1,13 @@
+apiVersion: rbac.open-cluster-management.io/v1beta1
+kind: PlacementBinding
+metadata:
+  name: sample-job-binding
+  namespace: default
+placementRef:
+  apiGroup: cluster.open-cluster-management.io
+  kind: Placement
+  name: sample-job-placement
+subjects:
+  - apiGroup: apps.open-cluster-management.io
+    kind: Application
+    name: sample-job-app
