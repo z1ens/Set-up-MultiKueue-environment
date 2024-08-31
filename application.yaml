@@ -1,0 +1,21 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: sample-job-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: sample-job
+  componentKinds:
+  - group: batch
+    kind: Job
+  descriptor:
+    type: sample-job
+    version: v1
+    description: "A sample job deployment across multiple clusters"
+  placement:
+    placementRef:
+      apiGroup: cluster.open-cluster-management.io
+      kind: Placement
+      name: sample-job-placement
