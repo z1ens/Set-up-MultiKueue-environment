@@ -9,7 +9,7 @@ For detailed commands and configuration examples, visit the [MultiKueue setup do
 
 ### 1. Worker Cluster Setup
 
-If you don't have an OCM environment, follow the [Quick-start-Installation](https://open-cluster-management.io/getting-started/quick-start/), to have a `kind-hub` as a manager cluster and two managed clusters `kind-cluster1` and `kind-cluster2`.
+If you don't have an OCM environment, follow the [Quick-start-Installation](https://open-cluster-management.io/docs/getting-started/quick-start/), to have a `kind-hub` as a manager cluster and two managed clusters `kind-cluster1` and `kind-cluster2`.
 
 - Configure `kubectl` to use the worker cluster. Here we use `kind-cluster3` as a worker cluster.
 
